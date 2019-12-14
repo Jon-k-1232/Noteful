@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Note from '../Note/Note'
 import CircleButton from '../CircleButton/CircleButton'
-import ApiContext from '../ApiContext'
+import AppContext from "../AppContext";
 import { getNotesForFolder } from '../notes-helpers'
 import './NoteListMain.css'
+
 
 export default class NoteListMain extends React.Component {
   static defaultProps = {
@@ -13,7 +14,7 @@ export default class NoteListMain extends React.Component {
       params: {}
     }
   }
-  static contextType = ApiContext
+  static contextType = AppContext
 
   render() {
     const { folderId } = this.props.match.params

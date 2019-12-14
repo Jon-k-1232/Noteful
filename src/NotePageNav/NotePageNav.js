@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import CircleButton from '../CircleButton/CircleButton'
-import ApiContext from '../ApiContext'
+import AppContext from '../AppContext'
 import { findNote, findFolder } from '../notes-helpers'
 import './NotePageNav.css'
 
@@ -14,7 +14,7 @@ export default class NotePageNav extends React.Component {
       params: {}
     }
   }
-  static contextType = ApiContext;
+  static contextType = AppContext;
 
   render() {
     const { notes, folders, } = this.context

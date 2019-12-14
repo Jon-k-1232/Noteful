@@ -7,10 +7,10 @@ import NoteListMain from '../NoteListMain/NoteListMain'
 import NotePageMain from '../NotePageMain/NotePageMain'
 import addFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
-import AppContext from '../Context/AppContext'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
-import config from '../config'
+//import config from '../config'
 import './App.css'
+import AppContext from '../AppContext';
 
 
 class App extends Component {
@@ -19,6 +19,8 @@ class App extends Component {
         folders: [],
     };
 
+
+/* take note off once backend ready
     componentDidMount() {
         const folderURL = `${config.API_ENDPOINT}/folders`
         const noteURL = `${config.API_ENDPOINT}/notes`
@@ -52,6 +54,9 @@ class App extends Component {
             }))
             .catch(error => alert(error))
     }
+    */
+
+
 
     handleDeleteNote = (noteId) => {
         const newNotes = this.state.notes.filter(note => note.id !== noteId)
@@ -61,17 +66,23 @@ class App extends Component {
         })
     }
 
+
+
     handleaddFolder = (newFolder) => {
         this.setState({
             folders: [...this.state.folders, newFolder]
         })
     }
 
+
+
     handleAddNote = (addedNote) => {
         this.setState({
             notes: [...this.state.notes, addedNote]
         })
     }
+
+
 
     renderNavRoutes() {
         return (
@@ -99,6 +110,7 @@ class App extends Component {
             </>
         )
     }
+
 
     renderMainRoutes() {
         return (

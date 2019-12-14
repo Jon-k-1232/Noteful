@@ -3,10 +3,9 @@ import { withRouter, Link } from 'react-router-dom'
 import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Note.css'
-import AppContext from '../Context/AppContext';
 import PropTypes from 'prop-types';
 import config from '../config'
-
+import AppContext from "../AppContext";
 
 
 function deleteNoteRequest(noteId, callback) {
@@ -62,7 +61,7 @@ class Note extends React.Component {
                                 Modified
                                 {' '}
                                 <span className='Date'>
-                {format(this.props.modified, 'Do MMM YYYY')}
+                {this.props.modified ? format(this.props.modified, 'MM-DD-YYYY') : ''}
               </span>
                             </div>
                         </div>

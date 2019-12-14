@@ -1,6 +1,6 @@
 import React from 'react'
 import Note from '../Note/Note'
-import ApiContext from '../ApiContext'
+import AppContext from '../AppContext'
 import { findNote } from '../notes-helpers'
 import './NotePageMain.css'
 
@@ -10,7 +10,7 @@ export default class NotePageMain extends React.Component {
       params: {}
     }
   }
-  static contextType = ApiContext
+  static contextType = AppContext
 
   handleDeleteNote = noteId => {
     this.props.history.push(`/`)

@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import NotefulForm from '../NotefulForm/NotefulForm'
 import { withRouter } from 'react-router-dom'
 import ValidationError from "../ValidationError/ValidationError";
-import AppContext from '../Context/AppContext'
 import config from '../config'
+import AppContext from "../AppContext";
+
 
 
 class addFolder extends Component {
@@ -81,6 +82,7 @@ class addFolder extends Component {
                 callback(newFolder)
             })
             .catch(error => alert(error))
+
     };
 
 

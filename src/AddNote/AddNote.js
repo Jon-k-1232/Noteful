@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import NotefulForm from '../NotefulForm/NotefulForm'
 import ValidationError from "../ValidationError/ValidationError";
-import AppContext from '../Context/AppContext'
+import AppContext from "../AppContext";
+import config from '../config'
+
+
 
 class addNote extends Component {
     constructor(props) {
@@ -43,7 +46,7 @@ class addNote extends Component {
             hasError = true;
         } else {
             if (fieldValue.length < 3) {
-                fieldErrors.name ="Please inpute at least 3 characters.";
+                fieldErrors.name ="Please input at least 3 characters.";
                 hasError = true;
             } else {
                 fieldErrors.name = '';
@@ -90,10 +93,10 @@ class addNote extends Component {
         const newNote = {
             name: this.state.name,
             content: this.state.content,
-            folderId: this.state.folderId,
+            //folderId: this.state.folderId,
         }
 
-        fetch("http://localhost:9090/notes", {
+        fetch(`${config.API_ENDPOINT}/notes`, {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -114,6 +117,10 @@ class addNote extends Component {
             .catch(error => alert(error))
 
     }
+
+
+
+
 
     render() {
         return (
