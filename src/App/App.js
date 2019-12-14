@@ -8,7 +8,7 @@ import NotePageMain from '../NotePageMain/NotePageMain'
 import addFolder from '../AddFolder/AddFolder'
 import AddNote from '../AddNote/AddNote'
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary'
-//import config from '../config'
+import config from '../config'
 import './App.css'
 import AppContext from '../AppContext';
 
@@ -20,7 +20,6 @@ class App extends Component {
     };
 
 
-/* take note off once backend ready
     componentDidMount() {
         const folderURL = `${config.API_ENDPOINT}/folders`
         const noteURL = `${config.API_ENDPOINT}/notes`
@@ -54,7 +53,6 @@ class App extends Component {
             }))
             .catch(error => alert(error))
     }
-    */
 
 
 
