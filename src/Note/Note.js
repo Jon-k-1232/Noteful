@@ -61,7 +61,7 @@ class Note extends React.Component {
                                 Modified
                                 {' '}
                                 <span className='Date'>
-                {this.props.modified ? format(this.props.modified, 'MM-DD-YYYY') : ''}
+                {this.props.modified ? format(new Date(this.props.modified), 'MM-dd-yyyy') : ''}
               </span>
                             </div>
                         </div>
