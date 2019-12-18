@@ -93,7 +93,8 @@ class addNote extends Component {
         const newNote = {
             name: this.state.name,
             content: this.state.content,
-            //folderId: this.state.folderId,
+            folderId: this.state.folderId,
+            modified: new Date(),
         }
 
         fetch(`${config.API_ENDPOINT}/notes`, {
