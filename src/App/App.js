@@ -21,8 +21,8 @@ class App extends Component {
 
 
     componentDidMount() {
-        const folderURL = `${config.API_ENDPOINT}/folders`
-        const noteURL = `${config.API_ENDPOINT}/notes`
+        const folderURL = `${config.API_ENDPOINT}/folder`;
+        const noteURL = `${config.API_ENDPOINT}/note`;
 
         fetch(folderURL)
             .then(res => {

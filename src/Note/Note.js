@@ -9,7 +9,7 @@ import AppContext from "../AppContext";
 
 
 function deleteNoteRequest(noteId, callback) {
-    const deleteURL = `${config.API_ENDPOINT}/notes/${noteId}`
+    const deleteURL = `${config.API_ENDPOINT}/note/${noteId}`;
 
     fetch(deleteURL, {
         method: 'DELETE',
