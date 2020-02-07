@@ -13,13 +13,13 @@ export default class NoteListMain extends React.Component {
     match: {
       params: {}
     }
-  }
+  };
   static contextType = AppContext
 
   render() {
     const { folderId } = this.props.match.params
     const { notes=[] } = this.context
-    const notesForFolder = getNotesForFolder(notes, folderId)
+    const notesForFolder = getNotesForFolder(notes, folderId);
     return (
       <section className='NoteListMain'>
         <ul>

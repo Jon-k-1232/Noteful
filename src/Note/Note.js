@@ -44,6 +44,7 @@ class Note extends React.Component {
                                 {this.props.name}
                             </Link>
                         </h2>
+
                         <button
                             className='Note__delete'
                             type='button'
@@ -56,15 +57,17 @@ class Note extends React.Component {
                             {' '}
                             remove
                         </button>
+
                         <div className='Note__dates'>
                             <div className='Note__dates-modified'>
                                 Modified
                                 {' '}
                                 <span className='Date'>
-                {this.props.modified ? format(new Date(this.props.modified), 'MM-dd-yyyy') : ''}
-              </span>
+                                {this.props.modified ? format(new Date(this.props.modified), 'MM-dd-yyyy') : ''}
+                                </span>
                             </div>
                         </div>
+
                     </div>
                 )}
             </AppContext.Consumer>

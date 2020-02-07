@@ -95,7 +95,7 @@ class addNote extends Component {
             content: this.state.content,
             folderId: this.state.folderId,
             modified: new Date(),
-        }
+        };
 
         fetch(`${config.API_ENDPOINT}/note`, {
             method: "POST",

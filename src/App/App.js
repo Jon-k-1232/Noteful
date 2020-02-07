@@ -62,7 +62,7 @@ class App extends Component {
         this.setState({
             notes: newNotes
         })
-    }
+    };
 
 
 
@@ -70,7 +70,7 @@ class App extends Component {
         this.setState({
             folders: [...this.state.folders, newFolder]
         })
-    }
+    };
 
 
 
@@ -78,7 +78,7 @@ class App extends Component {
         this.setState({
             notes: [...this.state.notes, addedNote]
         })
-    }
+    };
 
 
 
